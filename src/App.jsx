@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   let [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://auth-rg69.onrender.com/api/products/all")
+    fetch(import.meta.env.VITE_API_URL)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => {
